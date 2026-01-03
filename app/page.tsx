@@ -1,4 +1,6 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-html-link-for-pages */
+/* eslint-disable @next/next/no-img-element */
+// import Image from "next/image";
 import { Hero } from "./Hero.tsx";
 
 export default function Home() {
@@ -202,7 +204,7 @@ export default function Home() {
                           >
                             <button
                               className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-primary-500 to-primary-400 text-[#1a1a1a] font-semibold hover:from-primary-400 hover:to-primary-300 focus:ring-primary-500 shadow-lg shadow-primary-500/20 px-3 py-1.5 text-sm w-full text-sm"
-                              disabled=""
+                              // disabled=""
                             >
                               + Добавить URL
                             </button>
@@ -415,7 +417,7 @@ export default function Home() {
                           <div className="block" tabIndex={0}>
                             <button
                               className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-success-500 to-success-600 text-white hover:from-success-600 hover:to-success-700 focus:ring-success-500 shadow-lg shadow-success-500/20 px-3 py-1.5 text-sm w-full text-sm"
-                              disabled=""
+                              // disabled=""
                             >
                               Запустить анализ
                             </button>
@@ -830,8 +832,8 @@ export default function Home() {
                                 <div className="rounded-xl p-3 transition-all duration-300 relative bg-[#1a1a1a]/80 backdrop-blur-lg border border-[#2a2a2a] shadow-xl  bg-[#1a1a1a]/50 hover:bg-[#1a1a1a]/70 transition-colors overflow-hidden">
                                   <div>
                                     <p className="text-sm text-gray-300 leading-relaxed mb-2">
-                                      Основной докладчик на SaaStr Annual 2024
-                                      на тему 'Будущее B2B SaaS'
+                                      {`Основной докладчик на SaaStr Annual 2024
+                                      на тему 'Будущее B2B SaaS'`}
                                     </p>
                                     <div className="flex flex-wrap gap-2 pt-2 border-t border-[#2a2a2a]">
                                       <a
