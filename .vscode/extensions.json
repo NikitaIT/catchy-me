@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"biomejs.biome",
+		"oven.bun-vscode",
+		"fill-labs.dependi",
+		"bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+		"davidanson.vscode-markdownlint",
+		"vitest.explorer"
+	]
+}

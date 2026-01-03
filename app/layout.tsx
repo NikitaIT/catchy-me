@@ -27,7 +27,268 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header
+          className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]/80 backdrop-blur-md border-b border-primary-500/10"
+          style={{ transform: "none" }}
+        >
+          <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16 md:h-20">
+              <div className="flex-shrink-0" style={{ transform: "none" }}>
+                <a className="flex items-center space-x-2" href="/">
+                  <img
+                    alt="Catchy Logo"
+                    loading="lazy"
+                    width="32"
+                    height="32"
+                    decoding="async"
+                    data-nimg="1"
+                    className="w-8 h-8 object-contain drop-shadow-[0_2px_8px_rgba(193,160,115,0.4)]"
+                    style={{ color: "transparent" }}
+                  />
+                  <span className="text-xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+                    Catchy
+                  </span>
+                </a>
+              </div>
+              <div className="hidden md:flex items-center space-x-1">
+                <a
+                  href="#hero"
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative group text-primary-400"
+                >
+                  Главная
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary-400 transition-all duration-200 w-full"></span>
+                </a>
+                <a
+                  href="#platform"
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative group text-gray-300 hover:text-primary-400"
+                >
+                  Платформа
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary-400 transition-all duration-200 w-0 group-hover:w-full"></span>
+                </a>
+                <a
+                  href="#features"
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative group text-gray-300 hover:text-primary-400"
+                >
+                  Преимущества
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary-400 transition-all duration-200 w-0 group-hover:w-full"></span>
+                </a>
+                <a
+                  href="#testimonials"
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative group text-gray-300 hover:text-primary-400"
+                >
+                  Клиенты
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary-400 transition-all duration-200 w-0 group-hover:w-full"></span>
+                </a>
+                <a
+                  href="#pricing"
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative group text-gray-300 hover:text-primary-400"
+                >
+                  Цены
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary-400 transition-all duration-200 w-0 group-hover:w-full"></span>
+                </a>
+                <a
+                  href="#contact"
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative group text-gray-300 hover:text-primary-400"
+                >
+                  Контакты
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary-400 transition-all duration-200 w-0 group-hover:w-full"></span>
+                </a>
+              </div>
+              <div className="hidden md:flex items-center space-x-3">
+                <div className="relative">
+                  <button
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#2a2a2a] hover:bg-[#333] border border-[#3a3a3a] transition-colors"
+                    aria-label="Change language"
+                    tabIndex={0}
+                    style={{ transform: "none" }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-globe w-4 h-4 text-primary-400"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                      <path d="M2 12h20"></path>
+                    </svg>
+                    <span className="text-sm font-medium text-gray-300">
+                      RU
+                    </span>
+                    <svg
+                      className="w-4 h-4 text-gray-400 transition-transform "
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <a href="/?login=true">
+                  <div tabIndex={0} style={{ transform: "none" }}>
+                    <div
+                      className="inline-block"
+                      tabIndex={0}
+                      style={{ transform: "none" }}
+                    >
+                      <button className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-gray-300 hover:bg-[#2a2a2a] focus:ring-gray-600 border border-[#333333] px-3 py-1.5 text-sm text-sm">
+                        Войти
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="/register">
+                  <div tabIndex={0} style={{ transform: "none" }}>
+                    <div
+                      className="inline-block"
+                      tabIndex={0}
+                      style={{ transform: "none" }}
+                    >
+                      <button className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed bg-gradient-to-r from-primary-500 to-primary-400 text-[#1a1a1a] font-semibold hover:from-primary-400 hover:to-primary-300 focus:ring-primary-500 shadow-lg shadow-primary-500/20 px-3 py-1.5 text-sm text-sm shadow-lg shadow-primary-500/20">
+                        Начать сейчас
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div className="md:hidden">
+                <button
+                  className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-[#2a2a2a] transition-colors"
+                  aria-label="Toggle menu"
+                  tabIndex={0}
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </nav>
+        </header>
         {children}
+        <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]">
+          <div className="w-full">
+            <div
+              className="mb-8 text-center max-w-4xl mx-auto"
+              style={{ opacity: 1 }}
+            >
+              <div className="text-xs text-gray-600 space-y-1">
+                <p>
+                  <sup className="text-primary-500">[1]</sup> по сравнению со
+                  стандартными рассылками
+                </p>
+                <p>
+                  <sup className="text-primary-500">[2]</sup> В быстром режиме,
+                  при оплате за год
+                </p>
+              </div>
+            </div>
+            <div
+              className="border-t border-[#2a2a2a] pt-8"
+              style={{ opacity: 1 }}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                <div className="text-center md:text-left">
+                  <p className="text-gray-500 text-sm">
+                    © 2025 catchy-me. Все права защищены.
+                  </p>
+                </div>
+                <div className="flex items-center gap-6 justify-center flex-wrap">
+                  <a
+                    href="mailto:support@catchy-me.com"
+                    className="text-gray-500 hover:text-primary-400 transition-colors text-sm"
+                  >
+                    Поддержка
+                  </a>
+                  <a
+                    className="text-gray-500 hover:text-primary-400 transition-colors text-sm"
+                    href="/privacy"
+                  >
+                    Политика конфиденциальности
+                  </a>
+                  <a
+                    className="text-gray-500 hover:text-primary-400 transition-colors text-sm"
+                    href="/terms"
+                  >
+                    Условия использования
+                  </a>
+                </div>
+                <div className="flex items-center gap-4 justify-center md:justify-end">
+                  <a
+                    href="https://www.linkedin.com/company/catchy-me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-primary-400 transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={24}
+                      height={24}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-linkedin w-5 h-5"
+                      aria-hidden="true"
+                    >
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect width={4} height={12} x={2} y={9} />
+                      <circle cx={4} cy={4} r={2} />
+                    </svg>
+                  </a>
+                  <a
+                    href="mailto:support@catchy-me.com"
+                    className="text-gray-500 hover:text-primary-400 transition-colors"
+                    aria-label="Email"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={24}
+                      height={24}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-mail w-5 h-5"
+                      aria-hidden="true"
+                    >
+                      <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                      <rect x={2} y={4} width={20} height={16} rx={2} />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
