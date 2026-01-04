@@ -233,7 +233,7 @@ export function Hero() {
           <div
             className={cn(
               "relative overflow-hidden rounded-2xl max-w-xs",
-              "bg-[url(/social-proof/linkedin-feed.jpg)]",
+              "bg-[url(/social-proof/linkedin-feed-dark.jpg)]",
               "h-200 lg:h-full w-72.5"
             )}
           ></div>
