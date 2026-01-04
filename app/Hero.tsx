@@ -1,4 +1,5 @@
 import { cn } from "#cn.ts";
+import Image from "next/image";
 import { SectionInnerClass } from "./styles.ts";
 
 export function Hero() {
@@ -220,10 +221,10 @@ export function Hero() {
           </div>
         </div>
         {/* Social proof #3 */}
-        <div className="relative w-full sm:w-auto flex flex-col items-center">
+        <div className="w-full sm:w-auto flex flex-col items-center">
           <div className="text-center pb-5">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 lg:hidden">
-              <span className="bg-gradient-to-r from-primary-500 via-primary-300 to-primary-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-primary-500 via-primary-300 to-primary-500 bg-clip-text text-transparent">
                 Convert them all!
               </span>
             </h2>
@@ -231,13 +232,17 @@ export function Hero() {
               {"They can't resist replying to your messages"}
             </p>
           </div>
-          <div
-            className={cn(
-              "relative overflow-hidden rounded-2xl max-w-xs",
-              "bg-[url(/social-proof/linkedin-feed-dark.jpg)]",
-              "h-200 lg:h-full w-72.5"
-            )}
-          ></div>
+          <div className="w-full h-200 lg:h-full overflow-hidden relative rounded-2xl">
+            {/* w-72.5 */}
+            <Image
+              aria-hidden="true"
+              alt="feed"
+              width={578}
+              height={1723}
+              src="/social-proof/linkedin-feed-dark.jpg"
+              className={cn("absolute top-0 h-auto w-full")}
+            />
+          </div>
         </div>
       </section>
     </>
