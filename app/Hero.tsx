@@ -27,7 +27,8 @@ export function Hero() {
                 "text-4xl md:text-5xl",
                 // "lg:text-7xl" that is ok if layout is centered, but not ok for left-aligned
                 "font-extrabold leading-none tracking-tight",
-                "mb-8 lg:mb-14"
+                "mb-8 lg:mb-14",
+                "text-white"
               )}
             >
               {"The First "}
