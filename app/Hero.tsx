@@ -230,14 +230,13 @@ export function Hero() {
               {"They can't resist replying to your messages"}
             </p>
           </div>
-          <div className="overflow-hidden rounded-2xl max-w-xs">
-            <img
-              aria-hidden="true"
-              src="/social-proof/linkedin-feed.jpg"
-              alt="LinkedIn Feed"
-              className="w-full object-contain pointer-events-none"
-            />
-          </div>
+          <div
+            className={cn(
+              "relative overflow-hidden rounded-2xl max-w-xs",
+              "bg-[url(/social-proof/linkedin-feed.jpg)]",
+              "h-200 lg:h-full w-72.5"
+            )}
+          ></div>
         </div>
       </section>
     </>
