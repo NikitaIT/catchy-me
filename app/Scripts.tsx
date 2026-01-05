@@ -24,6 +24,11 @@ export function Scripts() {
 
   gtag('config', 'G-SMHY9BMCRK');`}
       </Script>
+      {/* iubenda cookie banner */}
+      <Script
+        async
+        src="https://embeds.iubenda.com/widgets/817150c6-4295-4382-9f95-73a0e378a0d7.js"
+      ></Script>
     </>
   );
 }
