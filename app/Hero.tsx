@@ -11,10 +11,14 @@ export function Hero() {
         className={cn(
           SectionInnerClass,
           "flex flex-wrap sm:justify-around",
-          "mt-24", // relaxed top padding for better visual balance, standard for sections
-          "gap-20" // gap because margin would not collapse with flex row items
+          // "pt-24", // relaxed top padding for better visual balance, standard for sections
+          "gap-20", // gap because margin would not collapse with flex row items
+          "pt-16 md:pt-20" // header shift
         )}
       >
+        {/* gap-2 on top */}
+        <div className="w-full"></div>
+        {/* header shift */}
         <div className={cn("flex flex-col", "items-center md:items-start")}>
           <hgroup
             className={cn(
@@ -190,15 +194,15 @@ export function Hero() {
           <div className="flex mx-auto gap-6 lg:gap-12 px-6 lg:px-10 py-4 lg:py-5 bg-white/[0.03] border border-white/10 rounded-full">
             <div className="items-center gap-2 hidden sm:flex">
               <span className="text-success font-bold text-base lg:text-lg">
-                2.3s
+                100%
               </span>
               <span className="text-gray-600 text-xs lg:text-sm">
-                to decide
+                personalized
               </span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-success font-bold text-base lg:text-lg">
-                9.5%
+                +9.5%
               </span>
               <span className="text-gray-600 text-xs lg:text-sm">
                 reply rate
@@ -212,10 +216,10 @@ export function Hero() {
             </div>
             <div className="items-center gap-2  hidden md:flex">
               <span className="text-success font-bold text-base lg:text-lg">
-                $30
+                10x
               </span>
               <span className="text-gray-600 text-xs lg:text-sm">
-                per meeting
+                conversion rate
               </span>
             </div>
           </div>

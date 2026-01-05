@@ -5,7 +5,7 @@ import { Hero } from "./Hero.tsx";
 
 export default function Home() {
   return (
-    <main className="main-back min-h-screen bg-[#0f0f0f] pt-16 md:pt-20">
+    <main className="main-back min-h-screen bg-[#0f0f0f]">
       <Hero />
       <section
         id="platform"

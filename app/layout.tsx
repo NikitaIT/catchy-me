@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Scripts } from "./Scripts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Scripts />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -46,6 +48,8 @@ export default function RootLayout({
                     data-nimg="1"
                     className="w-8 h-8 object-contain drop-shadow-[0_2px_8px_rgba(193,160,115,0.4)]"
                     style={{ color: "transparent" }}
+                    srcSet="https://catchy-me.com/_next/image?url=%2Fcatchy_logo_nav.png&amp;w=32&amp;q=75 1x, https://catchy-me.com/_next/image?url=%2Fcatchy_logo_nav.png&amp;w=64&amp;q=75 2x"
+                    src="https://catchy-me.com/_next/image?url=%2Fcatchy_logo_nav.png&amp;w=64&amp;q=75"
                   />
                   <span className="text-xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
                     Catchy
